@@ -128,7 +128,6 @@
 	//init继承Try原型
 	Try.prototype.init.prototype = Try.prototype;
 
-	//$号赋值，返回构造函数
+	//$号赋值
 	window.Try = window.$ = Try;
-	return Try;
 })(window, document) //将window及document传入，限制为局部参数，避免每次调用全局查找
