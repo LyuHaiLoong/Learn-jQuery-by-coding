@@ -1,2 +1,3 @@
 # Learn-jQuery-by-coding
-Try to learn jQuery by coding, all the demos here.
+以将jQuery源码尽可能写一遍的方式学习jQuery源码，所有的练习demos及学习笔记会放在这个仓库。
+
