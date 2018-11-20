@@ -21,7 +21,7 @@
 		init: function(selector) { //不能使用箭头函数，箭头函数无法执行new操作
 			if (!selector) { //如果初始化没传参，直接给对象节点设置为document
 				this.selector = document;
-				return;
+				return this;
 			}
 
 			this.find(selector);
