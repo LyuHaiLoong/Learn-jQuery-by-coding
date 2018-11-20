@@ -37,18 +37,39 @@
 				//this.selector是否已经存在，调用find前是否已经存在父节点
 				if (this.i && this.selector) { //不是id查找
 					const ele = this.i;
-					if ($1 === "#") selector = ele.querySelector($0); //getElementById只能document下查找，所以换成querySelector
-					else if ($1 === ".") selector = ele.getElementsByClassName($2);
-					else selector = ele.getElementsByTagName($2);
+					switch($1) {
+						case "#":
+							selector = ele.querySelector($0); //getElementById只能document下查找，所以换成querySelector
+							break;
+						case ".":
+							selector = ele.getElementsByClassName($2);
+							break;
+						default:
+							selector = ele.getElementsByTagName($2);
+					}
 				} else if (!this.i && this.selector) { //是id查找
 					const ele = this.selector;
-					if ($1 === "#") selector = ele.querySelector($0); //getElementById只能document下查找，所以换成querySelector
-					else if ($1 === ".") selector = ele.getElementsByClassName($2);
-					else selector = ele.getElementsByTagName($2);
+					switch($1) {
+						case "#":
+							selector = ele.querySelector($0); //getElementById只能document下查找，所以换成querySelector
+							break;
+						case ".":
+							selector = ele.getElementsByClassName($2);
+							break;
+						default:
+							selector = ele.getElementsByTagName($2);
+					}
 				} else { //如果初始化没传参，那么对象节点就是document，那就在document下找
-					if ($1 === "#") selector = document.getElementById($2);
-					else if ($1 === ".") selector = document.getElementsByClassName($2);
-					else selector = document.getElementsByTagName($2);
+					switch($1) {
+						case "#":
+							selector = document.getElementById($0); //getElementById只能document下查找，所以换成querySelector
+							break;
+						case ".":
+							selector = document.getElementsByClassName($2);
+							break;
+						default:
+							selector = document.getElementsByTagName($2);
+					}
 				}
 			})
 
